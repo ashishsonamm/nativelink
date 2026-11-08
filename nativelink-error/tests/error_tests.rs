@@ -236,3 +236,10 @@ mod redis_error_codes {
         );
     }
 }
+
+// TEMPORARY: fails on purpose to exercise the fork build-results path
+// (#3143/#3144) end to end. Never merge.
+#[test]
+fn deliberately_failing_for_fork_build_results_e2e() {
+    assert_eq!(1 + 1, 3, "FORK-BEP-E2E deliberate failure");
+}
